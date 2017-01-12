@@ -298,7 +298,7 @@ Instant Connect UI
 .theme-right {background:#e5e9ee;
 height:600px;
 width: 100%;}
-.theme-view{ background: #fff; height: 400px; width:100%; margin-top:10px; }
+.theme-view{ background: #fff; height:100%; width:100%; margin-top:10px; }
 .theme-header{ border: 1px solid #ededed;  padding: 0px 0px; position: relative; }
 .srt{background:#fafafb;  padding: 6px 20px; display: inline-block;}
 .meet{ border-top:2px solid #790303;  border-right: 1px solid #ededed; border-left:1px solid #ededed; padding: 3px 10px 6px;
@@ -318,7 +318,12 @@ border-radius: 3px 3px 0 0; }
 .thumbnail1 li img{ width:200px; border: 2px solid #fff; }
 .thumbnail1 li p{ text-align: center; margin-top:5px; margin-bottom:20px;}
 .thumbnail1 li:hover img{ border:2px solid rgb(121,3,3);}
-.thumbnail1 li:hover p span{ background:rgb(121,3,3); color:#fff; padding: 1px 20px 4px; border-radius: 20px;   }
+.thumbnail1 li:hover p span{ background:rgb(121,3,3); color:#fff; padding: 1px 20px 4px; border-radius: 20px;}
+.slider{ margin-top:60px; }
+.per{ display: inline-block;  padding: 0 10px}
+.page-number{display: inline-block; padding:7px 10px; background: #ededed; border-radius: 10px; border: 1px solid #ccc;}
+.next{ display: inline-block; padding:0 10px;}
+.clos-pre{ float: left; background: rgb(121,3,3); padding:5px 10px; border-radius: 10px; display: inline-block; color:#fff; margin-left:10px;}
 </style>
 <!-- Presentation Room --> 
 <div class="col-lg-9 col-md-9 col-sm-8">
@@ -359,6 +364,15 @@ border-radius: 3px 3px 0 0; }
     <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
     <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
      </ul>   
+   </div>
+   </div>
+   <div class="row">
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+   <div class="clos-pre">Close Presentation</div>
+   <div class="per">PREVIOUS</div>
+   <div class="page-number">Page 1 of 10</div>
+   <div class="next">NEXT</div>
+   </div>
    </div>
    </div>
 </div>
