@@ -326,15 +326,71 @@ border-radius: 3px 3px 0 0; }
 .bottom-menu{ position: relative; margin-top:40px;}
 .clos-pre{ background: rgb(121,3,3); padding:5px 10px; border-radius: 10px; color:#fff; margin-left:10px; position: absolute;}
 .pencil{ display: inline-block; position:relative;}
-.pencil ul{padding: 2px 4px; position: absolute; top:-50px; background: #ededed; left:0; border-radius:5px 5px 0 0;}
+.pencil ul{padding: 2px 4px !important; position: absolute; top:-52px; background: #ededed; left:0; border-radius:5px 5px 0 0;}
 .pencil ul li{ list-style-type: none;}
-.pen{ background: #ededed; padding: 5.5px; }
+.pen{ background: #ededed; padding: 5.5px; border-radius: 3px;}
 .pen img { vertical-align: top;}
 .pen-btn{ display: none; }
+.tool{ position: absolute; right:10px; top:0;}
+.tool ul{padding: 0;}
+.tool ul li{ list-style-type: none; float: left; margin-right: 4px; }
 .position-change{ display: inline-block; }
 .position-change ul { padding: 0; }
 .position-change ul li{ list-style-type: none; float: left; }
-.position-change ul li img{ padding-top:5px;}
+.position-change ul li img{ padding-top:0px;}
+.color-picker{display: inline-block;}
+.color-picker ul{ padding: 0;  }
+.color-picker ul li{padding: 0px; margin-right:4px;  list-style-type: none; float: left; width:23px; height: 23px; border-radius: 3px; border:1px solid #ccc;}
+.yellow{ background:#fff600; }.block{background: #000;}.wight{ background: #fff; }.red{ background: #f00; }.blue{ background: #0000ff; }
+/* range bar */
+.range-slider{ position: relative; }
+.range {
+   position: absolute; top:-105px; left:7px;
+    cursor: pointer; display: none;
+}
+
+.range input[type="range"] {
+    
+    cursor: pointer;
+}
+
+
+.range output {
+    display: table-cell;
+    padding: 3px 5px 2px;
+    min-width: 40px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(153, 153, 153);
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 100px;
+    padding: 5px 5px;
+    background: #ccc;
+}
 </style>
 <!-- Presentation Room --> 
 <div class="col-lg-9 col-md-9 col-sm-8">
@@ -370,19 +426,36 @@ border-radius: 3px 3px 0 0; }
                  <div class="per">PREVIOUS</div>
                  <div class="page-number">Page 1 of 10</div>
                  <div class="next">NEXT</div>
-                 <div class="pencil">
+                 <div class="tool">
+                 <ul>
+                 <li class="pencil"><span class="pen"><img src="dist/img/pen.png"></span>
                     <ul class="pen-btn">
                        <li><img src="dist/img/era.png" data-toggle="tooltip" data-placement="right" title="Eraser"></span></li>
-                      <li><img src="dist/img/pen.png" data-toggle="tooltip" data-placement="right" title="Pencil"></span></li>
+                       <li><img src="dist/img/pen.png" data-toggle="tooltip" data-placement="right" title="Pencil"></span></li>
                     </ul>
-                     <span class="pen"><img src="dist/img/pen.png"></span>
-                 </div>
-                 <div class="position-change">
+                     </li>
+                 
+                 <li class="position-change">
                    <ul>
                    <li><img src="dist/img/tarn-left.png"></li>
                    <li><img src="dist/img/tarn--right.png"></li>
                    </ul>
-                 </div>
+                 </li>
+                 <li class="range-slider"><img src="dist/img/bar.png">
+                 <div class="range"><input type="range" orient="vertical" /></div>
+                 </li>
+                 <li class="color-picker">
+                   <ul>
+                      <li class="yellow"></li>
+                      <li class="block"></li>
+                      <li class="wight"></li>
+                      <li class="red"></li>
+                      <li class="blue"></li>
+                   </ul>
+                 </li>
+                 <li><img src="dist/img/theme.png" data-toggle="tooltip" data-placement="top" title="Hide Thumbs"></li>
+                 </ul>
+             </div>
              </div>
            </div>
     </div>
@@ -783,6 +856,10 @@ $(document).ready(function(){
 });
 $(".pen").click(function(){
     $(".pen-btn").toggle();
+});
+
+$(".range-slider img").click(function(){
+    $(".range").toggle();
 });
 </script>
 
