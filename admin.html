@@ -180,7 +180,7 @@ Instant Connect UI
     <section class="content">
 
       <!-- Start Video and group chat -->
-      <div class="col-lg-3 col-md-3 col-sm-4 video-chat">
+      <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 video-chat">
         <div class="video-container agent">
             <div class="video-agent">
             <img src="dist/img/agent-video-mock-up.jpg" class="img-responsive"/>
@@ -306,7 +306,7 @@ border-radius: 3px 3px 0 0; }
 .bord{ border: 1px solid #ededed; padding: 4px 10px 6px;}
 .menu-style{ position: relative; }
 .pls{ font-size:18px;font-weight:600;  padding:10px; cursor: pointer;}
-.meet-menu{ position: absolute; top:33px;  right: 315px; background: #790303; display: none; z-index: 1000;}.meet-menu ul li a{ color:#fff; }
+.meet-menu{ position: absolute; top:40px; background: #790303; display: none; z-index: 1000; width:200px; left: 0;}.meet-menu ul li a{ color:#fff; }
 .menu-type li{ border-bottom:1px solid #222; }
 .menu-type li a span { padding-right:10px; }
 .menu-type li a span img{width:30px;}
@@ -314,12 +314,12 @@ border-radius: 3px 3px 0 0; }
 .nav > li > a:hover, .nav > li > a:active, .nav > li > a:focus{ background: #222; color: #fff; }
 /*.slider img{height: 350px; width:820px;}*/
 .thumbnail1{ padding:0; background:#dddddd; overflow-y: auto; height:490px; margin-bottom: 0;}
-.thumbnail1 li{ list-style-type: none; padding-top:10px; text-align: center;} 
-.thumbnail1 li img{ width:112px; border: 2px solid #fff; }
+.thumbnail1 li{ list-style-type: none; padding-top:10px; text-align: center; padding-left:7px; padding-right:7px;} 
+.thumbnail1 li img{border: 2px solid #fff; }
 .thumbnail1 li p{ text-align: center; margin-top:5px; margin-bottom:6px;}
 .thumbnail1 li:hover img{ border:2px solid rgb(121,3,3);}
 .thumbnail1 li:hover p span{ background:rgb(121,3,3); color:#fff; padding: 1px 20px 4px; border-radius: 20px;}
-.slider{ margin-top:30px; border-bottom: 1px solid #ccc; padding-bottom: 20px}
+.slider{ padding-top:20px;}
 .per{ display: inline-block;  padding: 0 10px}
 .page-number{display: inline-block; padding:4px 10px; background: #ededed; border-radius: 10px; border: 1px solid #ccc;}
 .next{ display: inline-block; padding:0 10px;}
@@ -329,27 +329,29 @@ border-radius: 3px 3px 0 0; }
 .pencil ul{padding: 2px 0px 0 6px !important; position: absolute; top:-52px; background: #ededed; left:0; border-radius:5px 5px 0 0;}
 .pencil ul li{ list-style-type: none;}
 .pen{padding: 5.5px; border-radius: 3px;}
-.pen img { vertical-align: top; width:20px; height:20px;}
+.pen img { vertical-align:middle; width:18px; height:18px;}
 .pen-btn{ display: none; }
-.pen-btn img{width:20px; height: 20px;}
+.pen-btn img{width:18px; height: 18px;}
 .tool{ position: absolute; right:-10px; top:0px;}
 .tool ul{padding: 0;}
-.tool ul li{ list-style-type: none; float: left; margin-right: 6px; }
+.tool ul li{ list-style-type: none; float: left; margin-right: 4px; }
 .position-change{ display: inline-block; }
 .position-change ul { padding: 0; }
 .position-change ul li{ list-style-type: none; float: left; }
-.position-change ul li img{ padding-top:0px; width: 20px; height:20px;}
+.position-change ul li img{ padding-top:0px; width: 18px; height:18px;}
+.tip-option img{ width: 20px; height: 20px; }
 .color-picker{display: inline-block;}
 .color-picker ul{ padding: 0;  }
-.color-picker ul li{padding: 0px; margin-top:2px; margin-right:6px;  list-style-type: none; float: left; width:20px; height: 20px; border-radius: 3px; border:1px solid #ccc;}
+.color-picker ul li{padding: 0px; margin-top:2px; margin-right:4px;  list-style-type: none; float: left; width:18px; height: 18px; border-radius: 3px; border:1px solid #ccc;}
 .yellow{ background:#fff600; }.block{background: #000;}.wight{ background: #fff; }.red{ background: #f00; }.blue{ background: #0000ff; }
 /* range bar */
 .range-slider{ position: relative; }
-.range-slider img{ width:20px; height: 20px; }
+.range-slider img{ width:18px; height: 18px; }
 .range {
    position: absolute; top:-105px; left:5px;
     cursor: pointer; display: none;
 }
+.page-number select{ background: transparent; border: none; }
 
 .range input[type="range"] {
     
@@ -396,13 +398,16 @@ input[type=range][orient=vertical]
 bottom: 20px;
     left: 0;
     position: absolute;
-    width: 100%; background: #fff; padding-bottom: 10px}
-@media(max-width:767px){.thumbnail1{display: none;} .padd-bom{ padding-right: 15px !important; } .clos-pre{ position: relative; margin-top: -60px }}
+    width: 100%; background: #fff; padding-bottom: 10px; padding-top:5px;}
+@media(max-width:767px){.thumbnail1{display: none;} .padd-bom{ padding-right: 15px !important; } .clos-pre{ position: relative; margin-top: -60px }.instant-connect .video-chat{ position: relative; top:1px; } .right-part{margin-left:0px !important;}.bottom-tool{ background: transparent; bottom: 210px } .clos-pre{margin-bottom:5px;}.tool{left: 62px; position: absolute; top: 12px;}}
 @media(min-width:1920px){.thumbnail1{height: 750px;} .thumbnail1 li img{ width:160px;}.direct-chat-messages{padding: 20px 10px;
-height: 480px;}.padd-bom{ padding-bottom: 53px; }.slider{padding-top: 60px;}}
+height: 480px;}.padd-bom{ padding-bottom: 53px; }}
+.pls{ position: relative; }
+.right-part{margin-left:340px; background: #fff;}
+select:focus{ outline: none; };
 </style>
 <!-- Presentation Room --> 
-<div class="col-lg-9 col-md-9 col-sm-8">
+<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 right-part">
    <div class="theme-right">
      <div class="theme-view">
      <div class="row">
@@ -411,7 +416,7 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; }.slider{padding-top: 60px;}}
          <span class="srt">Start</span>
          <span class="meet">Meeting room Presentation.ppt</span>
          <span class="bord">WHITEBOARD</span>
-         <!--<span class="menu-style">--><span class="pls">+</span>
+         <!--<span class="menu-style">--><span class="pls">+
          <div class="col-md-3 column margintop20 meet-menu">
         <ul class="nav nav-pills nav-stacked menu-type">
            <li class="active"><a href="#"><span><img src="dist/img/menu.png"></span> Home</a></li>
@@ -420,7 +425,7 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; }.slider{padding-top: 60px;}}
            <li><a href="#"><span><img src="dist/img/menu3.png"></span> Option 3</a></li>
         </ul>
        </div>
-       <!--</span>-->
+       </span>
     </div>
     </div>
     </div>
@@ -431,15 +436,15 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; }.slider{padding-top: 60px;}}
          </div>
         
     </div>
-    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding-left:5px;">
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12" style="padding-left:0px;">
     <ul class="thumbnail1">
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
+    <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+    <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+    <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+    <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+    <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+    <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+    <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
      </ul>   
    </div>
 
@@ -448,7 +453,7 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; }.slider{padding-top: 60px;}}
              <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 text-center bottom-menu">
                  <div class="clos-pre">Close Presentation</div>
                  <div class="per">PREVIOUS</div>
-                 <div class="page-number">Page 1 of 10</div>
+                 <div class="page-number"><select><option>Page 1 of 10</option><option>Page 10 of 20</option></select></div>
                  <div class="next">NEXT</div>
                  <div class="tool">
                  <ul>
@@ -477,7 +482,7 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; }.slider{padding-top: 60px;}}
                         <li class="blue"></li>
                     </ul>
                    </li>
-                   <li><img src="dist/img/theme.png" data-toggle="tooltip" data-placement="top" title="Hide Thumbs"></li>
+                   <li class="tip-option"><img src="dist/img/theme.png" data-toggle="tooltip" data-placement="top" title="Hide Thumbs"></li>
                  </ul>
                </div>
              </div>
