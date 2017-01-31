@@ -296,16 +296,22 @@ Instant Connect UI
 <!-- End Video and Group Chat -->
 <style>
 .theme-right {background:#e5e9ee;
-height:600px;
+
 width: 100%;}
 .theme-view{ background: #fff; width:100%; margin-top:10px;  padding-bottom: 10px}
-.theme-header{ border: 1px solid #ededed;  padding: 0px 0px; position: relative; }
-.srt{background:#fafafb;  padding: 6px 20px; display: inline-block;}
+.theme-header{ outline: 1px solid #ededed;  padding: 0px 0px; position: relative; }
+.srt{    /* background: #fafafb; */
+    padding: 6px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.8rem;
+    float:left;}
 .meet{ border-top:2px solid #790303;  border-right: 1px solid #ededed; border-left:1px solid #ededed; padding: 3px 10px 6px;
 border-radius: 3px 3px 0 0; }
 .bord{ border: 1px solid #ededed; padding: 4px 10px 6px;}
 .menu-style{ position: relative; }
-.pls{ font-size:18px;font-weight:600;  padding:10px; cursor: pointer;}
+.pls{ font-size:24px;font-weight:600; cursor: pointer;}
 .meet-menu{ position: absolute; top:40px; background: #790303; display: none; z-index: 1000; width:200px; left: 0;}.meet-menu ul li a{ color:#fff; }
 .menu-type li{ border-bottom:1px solid #222; }
 .menu-type li a span { padding-right:10px; }
@@ -323,30 +329,31 @@ border-radius: 3px 3px 0 0; }
 .per{ display: inline-block;  padding: 0 10px}
 .page-number{display: inline-block; padding:4px 10px; background: #ededed; border-radius: 10px; border: 1px solid #ccc;}
 .next{ display: inline-block; padding:0 10px;}
-.bottom-menu{ position: relative;}
+.bottom-menu{ position: relative; padding:0px!important;}
 .clos-pre{ background: rgb(121,3,3); padding:5px 10px; border-radius: 10px; color:#fff; margin-left:20px; position: absolute; bottom:0px;}
 .pencil{ display: inline-block; position:relative;}
-.pencil ul{padding: 2px 0px 0 6px !important; position: absolute; top:-52px; background: #ededed; left:0; border-radius:5px 5px 0 0;}
+.pencil ul{padding: 5px 0px 0px 5px !important; position: absolute; top: -85px; background: #ededed; left: 0; border-radius: 5px;}
 .pencil ul li{ list-style-type: none;}
 .pen{padding: 5.5px; border-radius: 3px;}
-.pen img { vertical-align:middle; width:18px; height:18px;}
+.pen img { vertical-align:middle; width:24px;}
 .pen-btn{ display: none; }
-.pen-btn img{width:18px; height: 18px;}
+.pen-btn img{width:24px;}
+.pen-btn  li { padding-bottom:10px; }
 .tool{ position: absolute; right:-10px; top:0px;}
 .tool ul{padding: 0;}
 .tool ul li{ list-style-type: none; float: left; margin-right: 4px; }
 .position-change{ display: inline-block; }
 .position-change ul { padding: 0; }
 .position-change ul li{ list-style-type: none; float: left; }
-.position-change ul li img{ padding-top:0px; width: 18px; height:18px;}
+.position-change ul li img{ padding-top:0px; width: 24px;}
 .tip-option img{ width: 20px; height: 20px; }
 .color-picker{display: inline-block;}
 .color-picker ul{ padding: 0;  }
-.color-picker ul li{padding: 0px; margin-top:2px; margin-right:4px;  list-style-type: none; float: left; width:18px; height: 18px; border-radius: 3px; border:1px solid #ccc;}
+.color-picker ul li{padding: 0px; margin-right:4px;  list-style-type: none; float: left; width:24px; height:24px; border-radius: 3px; border:1px solid #ccc;}
 .yellow{ background:#fff600; }.block{background: #000;}.wight{ background: #fff; }.red{ background: #f00; }.blue{ background: #0000ff; }
 /* range bar */
 .range-slider{ position: relative; }
-.range-slider img{ width:18px; height: 18px; }
+.range-slider img{ width:24px; }
 .range {
    position: absolute; top:-105px; left:5px;
     cursor: pointer; display: none;
@@ -395,15 +402,43 @@ input[type=range][orient=vertical]
     background: #ccc;
 }
 .bottom-tool{
-bottom: 20px;
-    left: 0;
+    bottom: 20px;
+    left: 30px;
     position: absolute;
-    width: 100%; background: #fff; padding-bottom: 10px; padding-top:5px;}
-@media(max-width:767px){.thumbnail1{display: none;} .padd-bom{ padding-right: 15px !important; } .clos-pre{ position: relative; margin-top: -60px }.instant-connect .video-chat{ position: relative; top:1px; } .right-part{margin-left:0px !important;}.bottom-tool{ background: transparent; bottom: 210px } .clos-pre{margin-bottom:5px;}.tool{left: 62px; position: absolute; top: 12px;}}
-@media(min-width:1920px){.thumbnail1{height: 750px;}.direct-chat-messages{padding: 20px 10px;
-height: 480px;}.padd-bom{ padding-bottom: 53px; } .right-part{ margin-left: 26%;}.bottom-tool{bottom:0px;}}
-@media(max-width:1919px){.right-part{margin-left:340px;}}.pls{ position: relative;}
+    width: 100%;
+    background: #fff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ededed;}
 
+    .nav-stacked>li+li {
+      margin-top: 0px!important;
+    }
+
+    .tab-btn {     float: left;
+    height: 100%;
+    border-left: 1px solid #dee1e8;
+    border-top: 1px solid #dee1e8;
+    border-right: 1px solid #dee1e8;
+    margin-top: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-right: 15px; cursor:pointer;}
+
+    .tab-btn.active { border-color:#7b0606; border-left-width:2px; border-right-widtH:2px; border-top-width:2px; }
+@media(max-width:767px){.thumbnail1{display: none;} .padd-bom{ padding-right: 15px !important; } .clos-pre{ position: relative; margin-top: -60px }.instant-connect .video-chat{ position: relative; top:1px; } .right-part{margin-left:0px !important;}.bottom-tool{ background: transparent; bottom: 210px } .clos-pre{margin-bottom:5px;}.tool{left: 62px; position: absolute; top: 12px;}}
+
+
+
+
+@media(min-width:992px){.thumbnail1{height: 668px;}.direct-chat-messages{padding: 20px 10px;
+height: 480px;}.padd-bom{ padding-bottom: 53px; } .right-part{ margin-left: 26% !important;}.bottom-tool{bottom:0px;}}
+.pls{ position: relative; }
+.right-part{margin-left:340px; /*background: #fff;*/}
+.content-wrapper,.right-part,.right-side, .main-footer{ margin-left: 10px; }
+.close-tab { padding-left:10px; cursor:pointer; }
 </style>
 <!-- Presentation Room --> 
 <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 right-part">
@@ -412,9 +447,9 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; } .right-part{ margin-left: 26%;
      <div class="row">
      <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
        <div class="theme-header">
-         <span class="srt">Start</span>
-         <span class="meet">Meeting room Presentation.ppt</span>
-         <span class="bord">WHITEBOARD</span>
+         <div class="srt">Start</div>
+         <div class="tab-btn active">Meeting room Presentation.ppt <span class="close-tab">&times;</span></div>
+         <div class="tab-btn">WHITEBOARD <span class="close-tab">&times;</span></div>
          <!--<span class="menu-style">--><span class="pls">+
          <div class="col-md-3 column margintop20 meet-menu">
         <ul class="nav nav-pills nav-stacked menu-type">
@@ -449,7 +484,7 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; } .right-part{ margin-left: 26%;
 
    </div>
    <div class="row bottom-tool">
-             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 text-center bottom-menu">
+             <div class="col-sm-11 col-md-9 col-xs-12 text-center bottom-menu">
                  <div class="clos-pre">Close Presentation</div>
                  <div class="per">PREVIOUS</div>
                  <div class="page-number"><select><option>Page 1 of 10</option><option>Page 10 of 20</option></select></div>
@@ -838,8 +873,10 @@ height: 480px;}.padd-bom{ padding-bottom: 53px; } .right-part{ margin-left: 26%;
 
 <!-- REQUIRED JS SCRIPTS -->
 
-<!-- jQuery 2.2.3 -->
-<script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
