@@ -15,12 +15,13 @@ Instant Connect UI
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Toolbar styles -->
+  <link rel="stylesheet" href="dist/css/jquery.toolbar.css">
+
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/instantconnect.min.css">
   
   <link rel="stylesheet" href="dist/css/skins/skin-red.min.css">
-   <link rel="stylesheet" href="dist/css/slider.css">
-    <link rel="stylesheet" href="dist/css/slider.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -173,14 +174,16 @@ Instant Connect UI
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-  
+    
 
 
     <!-- Main content -->
     <section class="content">
 
       <!-- Start Video and group chat -->
-      <div class="col-lg-3 col-md-3 col-sm-4 video-chat">
+     <div class="row">
+     <div class="col-xs-12 col-md-3 col-sm-4 video-chat">
+        
         <div class="video-container agent">
             <div class="video-agent">
             <img src="dist/img/agent-video-mock-up.jpg" class="img-responsive"/>
@@ -190,9 +193,42 @@ Instant Connect UI
          
         </div> 
 
-        <div class="client-video-container">
+        <div class="client-videos-container">
+           
+              <!--CLIENT VIDEO -->
+              <div class="col-xs-4 video-container">
+                  <div class="video">
+                  </div>
+              </div>
+              <!-- END CLIENT VIDEO -->
 
-       
+              <!-- CLIENT VIDEO -->
+              <div class="col-xs-4 video-container">
+                  <div class="video">
+                  </div>
+              </div>
+              <!-- END CLIENT VIDEO -->
+
+
+              <!-- CLIENT VIDEO -->
+              <div class="col-xs-4 video-container">
+                  <div class="video">
+                  </div>
+              </div>
+              <!-- END CLIENT VIDEO -->
+
+              <!-- CLIENT VIDEO -->
+              <div class="col-xs-4 video-container">
+                  <div class="video">
+                  </div>
+              </div>
+              <!-- END CLIENT VIDEO -->
+
+
+
+              
+          
+        </div>
       <!-- Group Chat -- >
        <!-- Construct the box with style you want. Here we are using box-danger -->
 <!-- Then add the class direct-chat and choose the direct-chat-* contexual class -->
@@ -290,81 +326,194 @@ Instant Connect UI
   <!-- /.box-footer-->
 </div><!--/.direct-chat -->
 </div>
-       </div>
+      
 
       </div>
 <!-- End Video and Group Chat -->
-<style>
-.theme-right {background:#e5e9ee;
-height:600px;
-width: 100%;}
-.theme-view{ background: #fff; height: 400px; width:100%; margin-top:10px; }
-.theme-header{ border: 1px solid #ededed;  padding: 0px 0px; position: relative; }
-.srt{background:#fafafb;  padding: 6px 20px; display: inline-block;}
-.meet{ border-top:2px solid #790303;  border-right: 1px solid #ededed; border-left:1px solid #ededed; padding: 3px 10px 6px;
-border-radius: 3px 3px 0 0; }
-.bord{ border: 1px solid #ededed; padding: 4px 10px 6px;}
-.menu-style{ position: relative; }
-.pls{ font-size:18px;font-weight:600;  padding:10px; cursor: pointer;}
-.meet-menu{ position: absolute; top:33px;  right: 315px; background: #790303; display: none; z-index: 1000;}.meet-menu ul li a{ color:#fff; }
-.menu-type li{ border-bottom:1px solid #222; }
-.menu-type li a span { padding-right:10px; }
-.menu-type li a span img{width:30px;}
-.meet-menu{ padding-right: 0; padding-left: 0; }
-.nav > li > a:hover, .nav > li > a:active, .nav > li > a:focus{ background: #222; color: #fff; }
-.slider img{height: 350px; width:720px;}
-.thumbnail1{ padding:0; background:#dddddd; overflow-y: auto; height:500px;}
-.thumbnail1 li{ list-style-type: none; padding-top:10px; text-align: center;} 
-.thumbnail1 li img{ width:200px; border: 2px solid #fff; }
-.thumbnail1 li p{ text-align: center; margin-top:5px; margin-bottom:20px;}
-.thumbnail1 li:hover img{ border:2px solid rgb(121,3,3);}
-.thumbnail1 li:hover p span{ background:rgb(121,3,3); color:#fff; padding: 1px 20px 4px; border-radius: 20px;   }
-</style>
-<!-- Presentation Room --> 
-<div class="col-lg-9 col-md-9 col-sm-8">
-   <div class="theme-right">
-     <div class="theme-view">
-     <div class="row">
-     <div class="col-lg-12 col-md-12 col-sm-12 col-sx-12">
-       <div class="theme-header">
-         <span class="srt">Start</span>
-         <span class="meet">Meeting room Presentation.ppt</span>
-         <span class="bord">WHITEBOARD</span>
-         <!--<span class="menu-style">--><span class="pls">+</span>
-         <div class="col-md-3 column margintop20 meet-menu">
-        <ul class="nav nav-pills nav-stacked menu-type">
-  <li class="active"><a href="#"><span><img src="dist/img/menu.png"></span> Home</a></li>
-  <li><a href="#"><span><img src="dist/img/menu1.png"></span> Option 1</a></li>
-  <li><a href="#"><span><img src="dist/img/memu2.png"></span> Option 2 </a></li>
-  <li><a href="#"><span><img src="dist/img/menu3.png"></span> Option 3</a></li>
-</ul>
-       </div>
-       <!--</span>-->
-    </div>
-    </div>
-    </div>
-    <div class="row">
-    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" style="padding-right:5px;">
-    <div class="slider">
-    <img src="dist/img/slider.jpg" class="img-responsive">
-    </div>
-    </div>
-    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="padding-left:5px;">
-    <ul class="thumbnail1">
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-    <li><img src="dist/img/slider.jpg"><p><span>Page</span></p></li>
-     </ul>   
-   </div>
-   </div>
-</div>
-</div>
 
-<!-- End PResentation Room -->
+<!--  MEETING ROOM WINDOWS -->
+<div class="col-xs-12 col-sm-9 meeting-panel-container">
+    
+    <div class="meeting-panel row">
+        
+        <div class="col-xs-12 panel-header no-pad">
+        <div class="home-label">Start</div>
+        <ul>
+            <li class="active"><a href="#1" data-toggle="tab">Whiteboard <span class="close-window">&times;</span></a></li>
+            <li><a href="#2" data-toggle="tab">Presentation Name <span class="close-window">&times;</span></a> </li>
+            <li><a href="#3" data-toggle="tab">Screen Share <span class="close-window">&times;</span></a> </li>
+            <li><a href="#4" data-toggle="tab">Youtube <span class="close-window">&times;</span></a> </li>
+        </ul>
+       
+        </div>
+ 
+
+    <div class="tab-content">
+    <!-- WHITEBOARD WINDOW -->
+      <div class="tab-pane active" id="1">
+         
+              <div class="col-xs-12 no-pad meeting-pane">
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <ul class="meet-icon">
+    <li class="presen-img"><a href=""></a></li>
+    <li class="screen-share"><a href=""></a></li>
+    <li class="whith-board"><a href=""></a></li>
+    <li class="youtube"><a href=""></a></li>
+    </ul>
+    </div>
+
+               <div class="pane-footer col-xs-12">
+                 
+                 <div class="col-sm-10 col-lg-12 col-md-10 col-xs-12 whiteboard-tools no-pad">
+                 <div class="col-sm-3 no-pad">
+                    <div class="clos-pre">Close Whiteboard</div>
+                 </div>
+
+
+                 <div class="col-sm-9 col-xs-12 tool no-pad pull-right">
+                 <ul>
+                    <div id="toolbar-options" class="hidden">
+                          <a href="#" id="pencil-tool"><i class="fa fa-pencil"></i></a>
+                          <a href="#" id="eraser-tool"><i class="fa fa-eraser"></i></a>   
+                    </div>
+                    <li class="pencil"><div class="pen"><i class="pencil-tool-fa fa fa-pencil"></i></div>
+                     
+                    </li>
+                 
+                    <li class="position-change">
+                      <ul>
+                         <li><img src="dist/img/tarn-left.png"></li>
+                         <li><img src="dist/img/tarn--right.png"></li>
+                      </ul>
+                    </li>
+                    <li class="range-slider"><img src="dist/img/bar.png">
+                    <div class="range"><input type="range" orient="vertical" /></div>
+                   </li>
+                   <li class="color-picker">
+                     <ul>
+                        <li class="yellow"></li>
+                        <li class="block"></li>
+                        <li class="wight"></li>
+                        <li class="red"></li>
+                        <li class="blue"></li>
+                    </ul>
+                   </li>
+                  
+                 </ul>
+               </div>
+             </div>
+
+               </div>
+             
+          </div>   
+      </div>
+       
+
+    <!-- END WHITEBOARD WINDOW -->
+
+    <!-- PRESENTATION WINDOW -->
+      <div class="tab-pane" id="2">
+         
+              <div class="col-xs-12 no-pad meeting-pane presentation-room thumbs-active">
+                <div class="col-xs-10 presentation-room no-pad">
+
+                </div>
+
+                <div class="col-xs-2 presentation-thumbs no-pad">
+
+                    <ul>
+                      <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+                      <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+                      <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+                      <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+                      <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+                      <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+                      <li><img src="dist/img/slider.jpg" class="img-responsive"><p><span>Page</span></p></li>
+                       </ul> 
+                </div>
+              <div class="pane-footer col-xs-12">
+                 <div class="col-sm-12 col-xs-12 whiteboard-tools no-pad">
+                 <div class="col-sm-3 no-pad"> 
+                 <div class="clos-pre">Close Presentation</div>
+                 </div>
+
+                 <div class="col-sm-4 no-pad pagination">
+                 <div class="per"><i class="fa fa-arrow-left" aria-hidden="true"></i> PREV</div>
+                 <div class="page-number"><select><option>Page 1 of 10</option><option>Page 10 of 20</option></select></div>
+                 <div class="next">NEXT <i class="fa fa-arrow-right" aria-hidden="true"></i></div>
+                 </div>
+
+                 <div class="col-sm-5 no-pad">
+                 <div class="tool">
+                 <ul>
+                    <div id="toolbar-options" class="hidden">
+                          <a href="#" id="pencil-tool"><i class="fa fa-pencil"></i></a>
+                          <a href="#" id="eraser-tool"><i class="fa fa-eraser"></i></a>   
+                    </div>
+                    <li class="pencil"><div class="pen"><i class="pencil-tool-fa fa fa-pencil"></i></div>
+                 
+                    <li class="position-change">
+                      <ul>
+                         <li><img src="dist/img/tarn-left.png"></li>
+                         <li><img src="dist/img/tarn--right.png"></li>
+                      </ul>
+                    </li>
+                    <li class="range-slider"><img src="dist/img/bar.png">
+                    <div class="range"><input type="range" orient="vertical" /></div>
+                   </li>
+                   <li class="color-picker">
+                     <ul>
+                        <li class="yellow"></li>
+                        <li class="block"></li>
+                        <li class="wight"></li>
+                        <li class="red"></li>
+                        <li class="blue"></li>
+                    </ul>
+                   </li>
+                   <li class="tip-option"><img src="dist/img/theme.png" data-toggle="tooltip" data-placement="top" title="Hide Thumbs"></li>
+                 </ul>
+               </div>
+             </div>
+             </div>
+
+
+
+              </div>
+          </div>   
+      </div>
+
+    <!-- END PRESENTATION WINDOW -->
+
+    <!-- SCREEN SHARE WINDOW -->
+      <div class="tab-pane" id="3">
+         
+              <div class="col-xs-12 no-pad meeting-pane">
+             Screen Share
+               <div class="pane-footer col-xs-12">test</div>
+            </div>   
+      </div>
+       
+    <!-- END SCREENSHARE WINDOW -->
+
+    <!-- YOUTUBE VIDEO WINDOW -->
+      <div class="tab-pane" id="4">
+         
+              <div class="col-xs-12 no-pad meeting-pane">
+              Youtube
+               <div class="pane-footer col-xs-12">test</div>
+          </div>   
+      </div>
+
+    <!-- END YOUTUBE WINDOW -->
+
+    </div>
+
+    </div>
+   </div>
+
+
+
+<!-- END MEETING ROOM WINDOWS -->
 
 
 
@@ -372,13 +521,16 @@ border-radius: 3px 3px 0 0; }
     </section>
     <!-- /.content -->
   </div>
-
-  <!-- /.content-wrapper -->
-  <!-- <footer class="main-footer">
+  <!-- END MEETING ROOM -->
+    <!-- /.content-wrapper -->
+ <footer class="main-footer">
     
-    <strong>Copyright &copy; 2014-2016 Financial Insiders.</strong> All rights
-    reserved.
-  </footer> -->
+    <strong>Powered by Agent Online</strong>
+  </footer>
+  </div>
+
+
+
 
 
   <!-- Control Sidebar -->
@@ -714,34 +866,15 @@ border-radius: 3px 3px 0 0; }
 
 <!-- REQUIRED JS SCRIPTS -->
 
+
 <!-- jQuery 2.2.3 -->
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- TOOL TIP -->
+<script src="dist/js/jquery.toolbar.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
-<script src="dist/js/slider.js"></script>
-<script class="language-javascript">
- $('.slider-for').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: '.slider-for',
-  dots: true,
-  centerMode: true,
-  focusOnSelect: true
-});
-      
-$(".pls").click(function(){
-    $(".meet-menu").toggle(200);
-});
-</script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

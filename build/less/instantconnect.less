@@ -38,7 +38,7 @@
 /* End Bootstrap Helper Classes */
 
 
-
+/* Instant Connect */
 
 .instant-connect {
 
@@ -49,7 +49,7 @@
 
 
 	
-
+/*MAIN SIDE BAR */
 	.main-sidebar {
 
 		font-family:'Roboto Condensed', sans-serif;
@@ -114,17 +114,19 @@
 
 
 
+/*END MAIN SIDE BAR */
+
+/* VIDEO CHAT */
 	.video-chat {
 
-		position:absolute;
-		top:0;
-		bottom:0;
-		z-index:1;
+		padding: 16px 16px 0px 32px;
+		z-index: 1;
+
 		background:#fafafb;
 		-webkit-box-shadow:3px 0 20px 0 rgba(0,0,0,0.20);
         -moz-box-shadow: 3px 0 20px 0 rgba(0,0,0,0.20);
     	box-shadow: 3px 0 20px 0 rgba(0,0,0,0.20);
-    	padding-top:70px;
+    
 
 
     	.video-agent {
@@ -147,31 +149,48 @@
     		img {
     			border-radius:10px;	
     		}
+
+    		
     	}
 		
+	.client-videos-container {
+		margin-top: 20px;
+		overflow-x: auto;
+    	white-space: nowrap;
 
+		.video-container {
+    		display:inline-block;
+    		float:none;
+    		padding-right:5px!important;
+    		padding-left:5px!important;
+
+    		.video {
+
+    			border-radius:10px;
+    			height:120px;
+    			background:#333;
+    		}
+    	}
+
+    }	
+/* VIDEO CHAT */
+
+/* CHAT CONTAINER */
 		.chat-container {
 
-			position:absolute;
-			bottom:0;
-			padding-right:10px;
+			
 			padding-bottom:10px;
-
-
-			.chat-admin {
-
-
-			}
-
-			.chat-client {
-
-
-			}
+			position:absolute;
+			bottom:0px;
+			padding-right:16px;
+			
 
 			.direct-chat-text {
 
+
 				margin-left:70px;
 				padding:10px;
+
 			}
 
 			.right {
@@ -191,8 +210,8 @@
 			}
 
 			.direct-chat-messages {
-
-				height:400px;
+				height:275px;
+				
 				overflow-y:auto;
 				margin-bottom: 20px;
 
@@ -201,15 +220,9 @@
 		
 	}
 
-	.presentation-room {
+	/* END CHAT */
 
-		
-		position:absolute;
-		top:0;
-		bottom:0;
-		min-height:100%;
-	}
-
+ 	/* Instant Connect Modal Windows */
 
 	.ICModalWindow {
 
@@ -355,13 +368,268 @@
 	}
 
 
+
+
+
+
 	.btn-red {
-  background-color: @red;
-  border-color: darken(@red, 5%);
-  color:white;
-  &:hover, &:active, &.hover {
-    background-color: darken(@red, 5%);
-  }
+  		background-color: @red;
+  		border-color: darken(@red, 5%);
+  		color:white;
+ 		&:hover, &:active, &.hover {
+    		background-color: darken(@red, 5%);
+  		}
+
+	}
+
+	/* END MODAL WINDOW */
+
+
+
+	/* MEETING WINDOWS */
+
+	.meeting-panel-container {
+		
+
+		
+		z-index: 0;
+
+
+
+    	.meeting-panel {
+
+    		border:1px solid @gray;
+    	
+    		.panel-header {
+    			border-bottom:1px solid @gray;
+
+    			.home-label {
+    				font-size:rem;
+    				padding-left:20px;
+    				padding-right:20px;
+    				text-transform:uppercase;
+    				font-weight:600;
+    				line-height:4rem;
+    				float:left;
+    				border-right: 1px solid #d2d6de;
+    			}
+
+    			height:40px;
+
+    			ul {
+    				list-style:none;
+
+    				li {
+    					
+    					&.active {
+
+    						a {
+    							 background:@red; color:white;
+
+    						}
+    					}
+    					float:left;
+    					
+    					a {
+
+    						   
+    							border-right: 1px solid #d2d6de;
+    							
+							    font-size: 1.6rem;
+							    color: #333;
+							    display: block;
+							   
+							    height: 40px;
+							    padding-left: 20px;
+							    padding-right: 20px;
+							    line-height: 3.8rem;
+
+							    .close-window {
+
+							    	
+							    	padding-left:10px;
+
+							    }
+
+							 &:hover, { background: lighten(@red, 10%); color:white;}
+
+    					}
+    				}
+    			}
+    		}
+
+    		background:#ffffff;
+    		height:100%;
+    		
+    		
+
+    		.screen({
+        		
+        		margin-top:40px;
+
+    		},{
+        	
+        		
+    		},{
+        		
+        		margin-top:20px;
+    			margin-right:20px;
+    			margin-bottom:20px;
+    			margin-left:0px;
+        		
+    		});
+    	}
+
+    	.meeting-pane {
+
+    		.pane-footer {
+    			padding-top: 7px;
+    			height:40px;
+    			position:absolute;
+    			bottom:0;
+    			border-top:1px solid @gray;
+
+    		}
+
+    		.whiteboard-tools {
+
+    			.pencil-tool {
+    				font-size:2.2rem;
+
+    			}
+
+
+    			.slider{ padding-top:20px;}
+.per{ display: inline-block;  padding: 0 10px; cursor: pointer;}
+.page-number{display: inline-block; padding:4px 10px; background: #ededed; border-radius: 10px; border: 1px solid #ccc;}
+.next{ display: inline-block; padding:0 10px; cursor:pointer;}
+.bottom-menu{ position: relative; padding:0px!important;}
+.clos-pre{ background: rgb(121,3,3); padding:5px 10px; border-radius: 10px; color:#fff; display:inline-block; margin-top: -3px; cursor:pointer;}
+.pencil{ display: inline-block; position:relative;}
+.pencil ul{padding: 5px 0px 0px 5px !important; position: absolute; top: -85px; background: #ededed; left: 0; border-radius: 5px;}
+.pencil ul li{ list-style-type: none;}
+.pen{    color: #555454; font-size: 2.4rem; margin-top: -6px; display: block; }
+.pen img { vertical-align:middle; width:24px;}
+.pen-btn{ display: none; }
+.pen-btn img{width:24px;}
+.pen-btn  li { padding-bottom:10px; }
+
+.tool ul{padding: 0; float:right;}
+.tool ul li{ list-style-type: none; float: left; margin-left: 6px; }
+.position-change{ display: inline-block; }
+.position-change ul { padding: 0; }
+.position-change ul li{ list-style-type: none; float: left; }
+.position-change ul li img{ padding-top:0px; width: 24px;}
+.tip-option img{ width: 20px; height: 20px; }
+.color-picker{display: inline-block;}
+.color-picker ul{ padding: 0;  }
+.color-picker ul li{padding: 0px; margin-right:4px;  list-style-type: none; float: left; width:24px; height:24px; border-radius: 3px; border:1px solid #ccc;}
+.yellow{ background:#fff600; }.block{background: #000;}.wight{ background: #fff; }.red{ background: #f00; }.blue{ background: #0000ff; }
+/* range bar */
+.range-slider{ position: relative; }
+.range-slider img{ width:24px; }
+.range {
+   position: absolute; top:-105px; left:5px;
+    cursor: pointer; display: none;
 }
+.page-number select{ background: transparent; border: none; }
+
+.range input[type="range"] {
+    
+    cursor: pointer;
+}
+
+    			.range output {
+					    display: table-cell;
+					    padding: 3px 5px 2px;
+					    min-width: 40px;
+					    color: rgb(255, 255, 255);
+					    background-color: rgb(153, 153, 153);
+					    text-align: center;
+					    text-decoration: none;
+					    border-radius: 4px;
+					    border-bottom-left-radius: 0;
+					    border-top-left-radius: 0;
+					    width: 1%;
+					    white-space: nowrap;
+					    vertical-align: middle;
+
+					    -webkit-transition: all 0.5s ease;
+					    -moz-transition: all 0.5s ease;
+					    -o-transition: all 0.5s ease;
+					    -ms-transition: all 0.5s ease;
+					    transition: all 0.5s ease;
+
+					    -webkit-user-select: none;
+					    -khtml-user-select: none;
+					    -moz-user-select: -moz-none;
+					    -o-user-select: none;
+					    user-select: none;
+				}
+				
+				input[type=range][orient=vertical]
+				{
+				    writing-mode: bt-lr; /* IE */
+				    -webkit-appearance: slider-vertical; /* WebKit */
+				    height: 100px;
+				    padding: 5px 5px;
+				    background: #ccc;
+				}
+
+				.pagination {
+					    text-align: center;
+					margin-top:-3px;
+				}
+
+
+
+    		}
+
+    		.presentation-thumbs {
+    			
+    			ul { padding:0; background:#dddddd; overflow-y: auto; margin-bottom: 0; 
+    				li { list-style-type: none; padding-top:10px; text-align: center; padding-left:7px; padding-right:7px; 
+    					p { text-align: center; margin-top:5px; margin-bottom:6px; }
+
+    					&:hover {
+
+    						img {
+
+    							 outline:2px solid rgb(121,3,3);
+
+    						}
+
+    						p {
+
+    							span {
+
+    								background:rgb(121,3,3); color:#fff; padding: 1px 20px 4px; border-radius: 20px;
+    							}
+    						}
+
+    					} 
+    				}
+
+    			}
+    		
+
+			
+    		}
+
+
+    	}
+		
+	}
+
+
+ 	/* MEETING WINDOWS */
 	
+
+
+ 	/* MAIN FOOTER */
+ 	.main-footer {
+
+ 		text-align:center;
+ 	}
 }
+
