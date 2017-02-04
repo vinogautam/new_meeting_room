@@ -3111,6 +3111,8 @@ table.text-center th {
     margin-top: 40px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+}
 @media (min-width: 992px) {
   .instant-connect .meeting-panel-container .meeting-panel {
     margin-top: 20px;
