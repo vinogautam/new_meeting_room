@@ -117,12 +117,15 @@ Instant Connect UI
           
           <!-- Control Sidebar Toggle Button -->
           <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-comments"></i></a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
+  <style>
+  .control-sidebar-dark, .control-sidebar-dark + .control-sidebar-bg{ background: #fff; border-left:1px solid #ccc; }
+  </style>
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar instant-connect-sidebar">
 
@@ -223,12 +226,9 @@ Instant Connect UI
                   </div>
               </div>
               <!-- END CLIENT VIDEO -->
+          </div>
+          </div>
 
-
-
-              
-          
-        </div>
       <!-- Group Chat -- >
        <!-- Construct the box with style you want. Here we are using box-danger -->
 <!-- Then add the class direct-chat and choose the direct-chat-* contexual class -->
@@ -243,129 +243,76 @@ Instant Connect UI
 @media(min-width:1920px){
 .instant-connect .video-chat .chat-container .direct-chat-messages{height:250px;}
 .instant-connect .video-chat .client-videos-container .video-container .video{ height: 120px }}
+.meeting-msg{ position: relative; }
+.meeting-msg h5{ color: #444; background: #ECF0F5; margin-top: 0; border-bottom: 1px solid #ccc; padding:20px 0; font-style: 16px}
+.meeting-msg .fa-comments{ font-size: 20px; font-weight: bold; color:rgb(121,3,3); padding-right: 10px; padding-left: 5px }
+.close-icon{ position: absolute;  top:27px; right: 16px;}
+.close-icon .fa-times{ color: #444; }
+.messages{ text-align:right; width: 85%; position: relative; float: left;}
+.ct-user-icon{ position: absolute; bottom: 27px; right: -30px; }
+.ct-user-icon img{ width:35px; height: 35px; border-radius: 50%; }
+.messages .chat-persion{ font-size: 12px; padding-right: 27px; color:#666; }
+.messages .del{ font-size:10px; color:#888; margin-top:10px; display: inline-block; margin-right:20px; font-weight:600;}
+.messages p { margin:0;}
+.messages p span{ text-align:right; max-width: 100%;
+    padding: 1.0rem 1.25rem; 
+    white-space: pre-wrap;
+    border-radius: 5px;
+    word-break: break-word;
+  margin:3px;
+  font-size: 1.4rem;
+}
+
+
+.msg-bar.msg-last{ background: #a60000 none repeat scroll 0 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 0;
+    margin-right: 10px; display:inline-block; color:#fff;}
+p:first-of-type .msg-bar.msg-last {
+    border-top-right-radius: 20px;}
+p:last-of-type .msg-bar.msg-last {
+    border-bottom-right-radius: 20px;
+}
+.msg-bar.msg-last1{ background: #0085a6 none repeat scroll 0 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 0;
+    margin-right: 10px; display:inline-block; color:#fff;}
+p:first-of-type .msg-bar.msg-last1 {
+    border-top-right-radius: 20px;}
+p:last-of-type .msg-bar.msg-last1 {
+    border-bottom-right-radius: 20px;
+}
+.chat-mathed{ position:relative; }
+.messages1{ text-align:left; width: 85%; position: relative; float: right;}
+.ct-user-icon1{ position: absolute; bottom: 0px; left: -33px; }
+.ct-user-icon1 img{ width:35px; height: 35px; border-radius: 50%; }
+.messages1 .chat-persion{font-size:10px; color:#888; font-weight:600; margin-top:10px; margin-left:20px; display: inline-block;}
+.messages1 p{ margin:0;}
+.messages1 p span{ text-align:left; max-width: 100%;
+    padding: 1.0rem 1.25rem;
+    white-space: pre-wrap;
+    border-radius: 5px;
+    word-break: break-word;
+  margin:3px; font-size: 1.4rem;}
+  .msg-bar-resive.msg-last-resive{ background:  #f8f8f8 none repeat scroll 0 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 0;
+    margin-right: 10px; display:inline-block;}
+p:first-of-type .msg-bar-resive.msg-last-resive {
+    border-top-left-radius: 20px;}
+p:last-of-type .msg-bar-resive.msg-last-resive {
+    border-bottom-left-radius: 20px;
+}
+.form-control1{width:100%; text-align:left; border-top:1px solid #790303;/* position:absolute;*/ bottom:0; background:#fff; display: inline-block;}
+.form-control1 textarea{border:none; font-size: 1.4rem; padding:10px 32px 4px; height:60px; margin-top:7px; resize:none; width:235px; background: transparent none repeat scroll 0 0; }
+.go{ background:none; border:none; width:50px;padding:8px 0; position:absolute; right:0; bottom:17px; color:#790303; font-size:16px;}
+.go1{ background:none; border:none; width:20px;padding:8px 0; position:absolute; left:7px; bottom:10px; color:#ccc; font-size:16px;}
 
 </style>
-<div class="chat-content">
-<div class="chat-container">
-      <ul class="chat-tab">
-            <li class="active"><a href="#user" data-toggle="tab">User</a></li>
-            <li><a href="#chat" data-toggle="tab">Chat</a> </li>
-            
-        </ul>
-  <div class="tab-content">
-    <!-- WHITEBOARD WINDOW -->
-     <div class="tab-pane active" id="user">
-      <div class="direct-chat">
-       <div class="box-body">
-          <!-- Conversations are loaded here -->
-          <div class="direct-chat-messages">
-             <div class="direct-chat-msg">
-                 <div class="direct-chat-info clearfix">
-                  </div><!-- /.direct-chat-info -->
-                  <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
-                  <div class="direct-chat-text">
-                  Alexander Pierce
-                  </div><!-- /.direct-chat-text -->
-              </div><!-- /.direct-chat-msg -->
-            </div>
-          </div>
-      </div>
-     </div>
-      <div class="tab-pane" id="chat">
-        <div class="direct-chat">
- 
-          <div class="box-body">
-          <!-- Conversations are loaded here -->
-             <div class="direct-chat-messages">
-             <!-- Message. Default to the left -->
-               <div class="direct-chat-msg">
-                 <div class="direct-chat-info clearfix">
-                   <span class="direct-chat-name pull-left">Alexander Pierce</span>
-                   <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
-                 </div><!-- /.direct-chat-info -->
-                 <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
-               <div class="direct-chat-text">
-               Is this template really for free? That's unbelievable!
-             </div><!-- /.direct-chat-text -->
-           </div><!-- /.direct-chat-msg -->
 
-      <!-- Message to the right -->
-      <div class="direct-chat-msg right">
-        <div class="direct-chat-info clearfix">
-          <span class="direct-chat-name pull-right">Sarah Bullock</span>
-          <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
-        </div><!-- /.direct-chat-info -->
-        <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
-        <div class="direct-chat-text">
-          You better believe it!
-        </div><!-- /.direct-chat-text -->
-      </div><!-- /.direct-chat-msg -->
-
-      <!-- Message. Default to the left -->
-      <div class="direct-chat-msg">
-        <div class="direct-chat-info clearfix">
-          <span class="direct-chat-name pull-left">Alexander Pierce</span>
-          <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
-        </div><!-- /.direct-chat-info -->
-        <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
-        <div class="direct-chat-text">
-          Is this template really for free? That's unbelievable!
-        </div><!-- /.direct-chat-text -->
-      </div><!-- /.direct-chat-msg -->
-
-      <!-- Message to the right -->
-      <div class="direct-chat-msg right">
-        <div class="direct-chat-info clearfix">
-          <span class="direct-chat-name pull-right">Sarah Bullock</span>
-          <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
-        </div><!-- /.direct-chat-info -->
-        <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
-        <div class="direct-chat-text">
-          You better believe it!
-        </div><!-- /.direct-chat-text -->
-      </div><!-- /.direct-chat-msg -->
-      <!-- Message. Default to the left -->
-      <div class="direct-chat-msg">
-        <div class="direct-chat-info clearfix">
-          <span class="direct-chat-name pull-left">Alexander Pierce</span>
-          <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
-        </div><!-- /.direct-chat-info -->
-        <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
-        <div class="direct-chat-text">
-          Is this template really for free? That's unbelievable!
-        </div><!-- /.direct-chat-text -->
-      </div><!-- /.direct-chat-msg -->
-
-      <!-- Message to the right -->
-      <div class="direct-chat-msg right">
-        <div class="direct-chat-info clearfix">
-          <span class="direct-chat-name pull-right">Sarah Bullock</span>
-          <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
-        </div><!-- /.direct-chat-info -->
-        <img class="direct-chat-img" src="dist/img/user3-128x128.jpg" alt="message user image"><!-- /.direct-chat-img -->
-        <div class="direct-chat-text">
-          You better believe it!
-        </div><!-- /.direct-chat-text -->
-      </div><!-- /.direct-chat-msg -->
-    </div><!--/.direct-chat-messages-->
-</div></div>
-
-
-  
-  </div><!-- /.box-body -->
-  
-    <div class="input-group">
-      <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-      <span class="input-group-btn">
-        <button type="button" class="btn btn-danger btn-flat">Send</button>
-      </span>
-    </div>
-  <!-- /.box-footer-->
-</div><!--/.direct-chat -->
-</div>
-    </div>  
-
-      </div>
 <!-- End Video and Group Chat -->
 
 <!--  MEETING ROOM WINDOWS -->
@@ -567,22 +514,59 @@ Instant Connect UI
   </div>
 
 
-
-
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
+  <div class="meeting-msg">
+    <h5><i class="fa fa-comments"></i> <span>Meeting Message</span></h5>
+    <div class="close-icon"><i class="fa fa-times close" aria-hidden="true"></i></div>
+    </div>
+      <div class="chat-mothed">
+      <div class="messages1">
+          <span class="chat-persion">Agent Name</span>
+           <p><span class="msg-bar-resive msg-last-resive">hi</span></p>
+          <p><span class="msg-bar-resive msg-last-resive">....</span></p>
+          <span class="ct-user-icon1"><img src="dist/img/user1-128x128.jpg"></span>
+     </div>
+     <!--<div class="messages1">
+         <span class="chat-persion">Agent Name 12.00 PM</span>
+     </div>-->
+          <div class="messages">
+          <span class="chat-persion">Agent Name </span>
+             <p><span class="msg-bar msg-last">hi how r u?</span></p>
+              <p><span class="msg-bar msg-last"> is there </span></p>
+             <p><span class="msg-bar msg-last"> is there</span></p>
+             <span class="del">Delivered 11:29 PM</span>
+             <span class="ct-user-icon"><img src="dist/img/user1-128x128.jpg"></span>
+
+           </div>
+          
+
+             <div class="messages">
+             <span class="chat-persion">Agent Name </span>
+             <p><span class="msg-bar msg-last1">hi how r u?</span></p>
+              <p><span class="msg-bar msg-last1"> is there </span></p>
+              <p><span class="msg-bar msg-last1"> is there </span></p>
+             <span class="del">Delivered 11:29 PM</span>
+             <span class="ct-user-icon"><img src="dist/img/user1-128x128.jpg"></span>
+
+           </div>
+     
+     </div>
+     <div class="chat-content">
+     <div class="form-control1">
+<form>
+<textarea id="msg" placeholder="Type a message here" rows="2"></textarea>
+<button class="go1"><i class="fa fa-paperclip" aria-hidden="true"></i></button>
+<button class="go"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+
+</form>
+</div>
+</div>
+    <!--<div class="tab-content">-->
       <!-- Home tab content -->
-      <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
+      <!--<div class="tab-pane active" id="control-sidebar-home-tab">-->
+        <!--<h3 class="control-sidebar-heading">Recent Activity</h3>-->
+        <!--<ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
@@ -594,11 +578,11 @@ Instant Connect UI
               </div>
             </a>
           </li>
-        </ul>
+        </ul>-->
         <!-- /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
+       <!-- <h3 class="control-sidebar-heading">Tasks Progress</h3>-->
+        <!--<ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
               <h4 class="control-sidebar-subheading">
@@ -613,20 +597,20 @@ Instant Connect UI
               </div>
             </a>
           </li>
-        </ul>
+        </ul>-->
         <!-- /.control-sidebar-menu -->
 
-      </div>
+      <!--</div>-->
       <!-- /.tab-pane -->
       <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!--<div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>-->
       <!-- /.tab-pane -->
       <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
+      <!--<div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">-->
+          <!--<h3 class="control-sidebar-heading">General Settings</h3>-->
 
-          <div class="form-group">
+          <!--<div class="form-group">
             <label class="control-sidebar-subheading">
               Report panel usage
               <input type="checkbox" class="pull-right" checked>
@@ -635,12 +619,12 @@ Instant Connect UI
             <p>
               Some information about this general settings option
             </p>
-          </div>
+          </div>-->
           <!-- /.form-group -->
-        </form>
-      </div>
+        <!--</form>
+      </div>-->
       <!-- /.tab-pane -->
-    </div>
+    <!--</div>-->
   </aside>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
