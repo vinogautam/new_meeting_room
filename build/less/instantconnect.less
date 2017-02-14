@@ -1,5 +1,5 @@
 
-/* Bootstrap Helper classes */
+/* Bootstrap Helper classes   */
 
 .no-pad {
 
@@ -629,4 +629,89 @@
  		text-align:center;
  	}
 }
+
+/* CHAT CSS */
+.chat-content{position: relative;}
+ .chat-tab{ padding: 0; background: #ccc;}
+ .chat-tab li{ list-style-type: none;  display: inline-block; padding: 5px; }
+ .chat-tab li a{color:rgb(121,3,3);}
+ .instant-connect .video-chat .client-videos-container .video-container .video{ height: 80px }
+.direct-chat-messages{ height: 120px; }
+@media(min-width:1920px){
+.instant-connect .video-chat .chat-container .direct-chat-messages{height:250px;}
+.instant-connect .video-chat .client-videos-container .video-container .video{ height: 120px }}
+.meeting-msg{ position: relative; }
+.meeting-msg h5{     color: #444;
+    background: #ECF0F5;
+    margin-top: 0;
+    border-bottom: 1px solid #ccc;
+    /* padding: 18px 0; */
+    height: 6.1rem;
+    line-height: 6.1rem;
+    font-size: 22px;}
+.meeting-msg .fa-comments{ font-size: 24px; font-weight: bold; color: rgb(121,3,3); padding-right: 10px; padding-left: 10px;}
+.close-icon{     position: absolute; top: 20px; right: 16px; font-size: 24px;}
+.close-icon .fa-times{ color: #444; }
+.messages{ text-align:right; width: 85%; position: relative; float: left;}
+.ct-user-icon{ position: absolute; bottom: 27px; right: -30px; }
+.ct-user-icon img{ width:35px; height: 35px; border-radius: 50%; }
+.messages .chat-persion{ font-size: 12px; padding-right: 27px; color:#666; }
+.messages .del{ font-size:10px; color:#888; margin-top:10px; display: inline-block; margin-right:20px; font-weight:600;}
+.messages p { margin:0;}
+.messages p span{ text-align:right; max-width: 100%;
+    padding: 1.0rem 1.25rem; 
+    white-space: pre-wrap;
+    border-radius: 5px;
+    word-break: break-word;
+  margin:3px;
+  font-size: 1.4rem;
+}
+
+
+.msg-bar.msg-last{ background: #a60000 none repeat scroll 0 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 0;
+    margin-right: 10px; display:inline-block; color:#fff;}
+p:first-of-type .msg-bar.msg-last {
+    border-top-right-radius: 20px;}
+p:last-of-type .msg-bar.msg-last {
+    border-bottom-right-radius: 20px;
+}
+.msg-bar.msg-last1{ background: #0085a6 none repeat scroll 0 0;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-bottom: 0;
+    margin-right: 10px; display:inline-block; color:#fff;}
+p:first-of-type .msg-bar.msg-last1 {
+    border-top-right-radius: 20px;}
+p:last-of-type .msg-bar.msg-last1 {
+    border-bottom-right-radius: 20px;
+}
+.chat-mathed{ position:relative; }
+.messages1{ text-align:left; width: 85%; position: relative; float: right; color:#333;}
+.ct-user-icon1{ position: absolute; bottom: 0px; left: -33px; }
+.ct-user-icon1 img{ width:35px; height: 35px; border-radius: 50%; }
+.messages1 .chat-persion{font-size:10px; color:#888; font-weight:600; margin-top:10px; margin-left:20px; display: inline-block;}
+.messages1 p{ margin:0;}
+.messages1 p span{ text-align:left; max-width: 100%;
+    padding: 1.0rem 1.25rem;
+    white-space: pre-wrap;
+    border-radius: 5px;
+    word-break: break-word;
+  margin:3px; font-size: 1.4rem;}
+  .msg-bar-resive.msg-last-resive{ background:  #f8f8f8 none repeat scroll 0 0;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 0;
+    margin-right: 10px; display:inline-block;}
+p:first-of-type .msg-bar-resive.msg-last-resive {
+    border-top-left-radius: 20px;}
+p:last-of-type .msg-bar-resive.msg-last-resive {
+    border-bottom-left-radius: 20px;
+}
+.form-control1{width:100%; text-align:left; border-top:1px solid #790303;/* position:absolute;*/ bottom:0; background:#fff; display: inline-block;}
+.form-control1 textarea{border:none; font-size: 1.4rem; padding:10px 32px 4px; height:60px; margin-top:7px; resize:none; width:235px; background: transparent none repeat scroll 0 0; }
+.go{ background:none; border:none; width:50px;padding:8px 0; position:absolute; right:0; bottom:17px; color:#790303; font-size:16px;}
+.go1{ background:none; border:none; width:20px;padding:8px 0; position:absolute; left:7px; bottom:10px; color:#ccc; font-size:16px;}
 
