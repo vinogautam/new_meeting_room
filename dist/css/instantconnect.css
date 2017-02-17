@@ -3574,13 +3574,16 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
   color: #ccc;
   font-size: 16px;
 }
-.user-element {
+.user-container {
+  max-height: 220px!important;
+}
+.user-container .user-element {
   padding: 7px;
   border-bottom: 1px solid #ddd;
   clear: right;
   display: block;
 }
-.user-element:after {
+.user-container .user-element:after {
   visibility: hidden;
   display: block;
   font-size: 0;
@@ -3588,22 +3591,28 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
   clear: both;
   height: 0;
 }
-.user-element .user-icon {
+.user-container .user-element .user-icon {
   float: left;
   font-size: 2rem;
   line-height: 4rem;
   color: #00a65a;
 }
-.user-element .user-name {
+.user-container .user-element .user-name {
   float: left;
   font-size: 1.6rem;
   line-height: 4rem;
+  width: 75px;
   margin-left: 10px;
+  display: block;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.user-element .user-controls {
+.user-container .user-element .user-controls {
   float: right;
 }
-.user-element .user-controls .user-control {
+.user-container .user-element .user-controls .user-control {
   border-radius: 3px;
   position: relative;
   padding: 4px 6px;
@@ -3616,13 +3625,16 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
   background-color: #f4f4f4;
   font-size: 1.6rem;
 }
-.user-element .user-controls .user-control.active,
-.user-element .user-controls .user-control:hover {
+.user-container .user-element .user-controls .user-control.active,
+.user-container .user-element .user-controls .user-control:hover {
   border: 2px solid #00a65a;
 }
 .users-footer {
   text-align: center;
   padding: 5px;
+}
+.user-list-dropdown-menu {
+  width: 320px!important;
 }
 /*@import "mailbox.less";*/
 /*@import "lockscreen.less";

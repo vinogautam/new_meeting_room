@@ -717,6 +717,10 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
 
 
 
+.user-container {
+
+	max-height:220px!important;
+
 .user-element {
 	padding:7px;
 	border-bottom:1px solid #ddd;
@@ -744,8 +748,13 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
 		float: left;
     font-size: 1.6rem;
     line-height: 4rem;
+    width: 75px;
     margin-left: 10px;
-
+    display: block;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
 	}
 
@@ -775,8 +784,18 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
 
 }
 
+
+
+
+}
+
 .users-footer {
 
 	text-align:center;
 	padding:5px;
+}
+
+.user-list-dropdown-menu {
+
+	width:320px!important;
 }
