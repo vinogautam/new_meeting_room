@@ -3574,6 +3574,56 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
   color: #ccc;
   font-size: 16px;
 }
+.user-element {
+  padding: 7px;
+  border-bottom: 1px solid #ddd;
+  clear: right;
+  display: block;
+}
+.user-element:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.user-element .user-icon {
+  float: left;
+  font-size: 2rem;
+  line-height: 4rem;
+  color: #00a65a;
+}
+.user-element .user-name {
+  float: left;
+  font-size: 1.6rem;
+  line-height: 4rem;
+  margin-left: 10px;
+}
+.user-element .user-controls {
+  float: right;
+}
+.user-element .user-controls .user-control {
+  border-radius: 3px;
+  position: relative;
+  padding: 4px 6px;
+  margin: 2px;
+  /* min-width: 80px; */
+  /* height: 60px; */
+  text-align: center;
+  color: #666;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  font-size: 1.6rem;
+}
+.user-element .user-controls .user-control.active,
+.user-element .user-controls .user-control:hover {
+  border: 2px solid #00a65a;
+}
+.users-footer {
+  text-align: center;
+  padding: 5px;
+}
 /*@import "mailbox.less";*/
 /*@import "lockscreen.less";
 @import "login_and_register.less";

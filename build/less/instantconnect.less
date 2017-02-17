@@ -715,3 +715,68 @@ p:last-of-type .msg-bar-resive.msg-last-resive {
 .go{ background:none; border:none; width:50px;padding:8px 0; position:absolute; right:0; bottom:17px; color:#790303; font-size:16px;}
 .go1{ background:none; border:none; width:20px;padding:8px 0; position:absolute; left:7px; bottom:10px; color:#ccc; font-size:16px;}
 
+
+
+.user-element {
+	padding:7px;
+	border-bottom:1px solid #ddd;
+	clear:right;
+	display:block;
+		
+&:after {
+	visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+}
+
+
+	.user-icon {
+		    float: left;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: #00a65a;
+	}
+
+	.user-name {
+		float: left;
+    font-size: 1.6rem;
+    line-height: 4rem;
+    margin-left: 10px;
+
+
+	}
+
+	.user-controls {
+		float:right;
+		.user-control {
+
+		    border-radius: 3px;
+    		position: relative;
+    		padding: 4px 6px;
+    		margin: 2px;
+    		/* min-width: 80px; */
+    		/* height: 60px; */
+    		text-align: center;
+    		color: #666;
+    		border: 1px solid #ddd;
+    		background-color: #f4f4f4;
+    		font-size: 1.6rem;
+
+    		&.active, &:hover {
+
+    			
+    			border:2px solid #00a65a;
+    		}
+		}
+	}
+
+}
+
+.users-footer {
+
+	text-align:center;
+	padding:5px;
+}
